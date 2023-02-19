@@ -1,6 +1,6 @@
 {
   "name": "otp-io",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "🕖 Typed library to work 2fa via Google Authenticator/Time-based TOTP/Hmac-based HOTP",
   "scripts": {
     "test": "jest",
