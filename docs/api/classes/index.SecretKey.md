@@ -1,6 +1,8 @@
-[QIWI SDK](../README.md) / [Exports](../modules.md) / SecretKey
+[QIWI SDK](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / SecretKey
 
 # Class: SecretKey
+
+[index](../modules/index.md).SecretKey
 
 **`Export`**
 
@@ -8,11 +10,11 @@
 
 ### Constructors
 
-- [constructor](SecretKey.md#constructor)
+- [constructor](index.SecretKey.md#constructor)
 
 ### Properties
 
-- [bytes](SecretKey.md#bytes)
+- [bytes](index.SecretKey.md#bytes)
 
 ## Constructors
 

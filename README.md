@@ -1,4 +1,4 @@
-# Quality Package Template
+# OTP io
 
 > Typed library to work 2fa via Google Authenticator/Time-based TOTP/Hmac-based HOTP
 

@@ -1,14 +1,16 @@
-[QIWI SDK](../README.md) / [Exports](../modules.md) / HmacAlgorithm
+[QIWI SDK](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / HmacAlgorithm
 
 # Enumeration: HmacAlgorithm
+
+[index](../modules/index.md).HmacAlgorithm
 
 ## Table of contents
 
 ### Enumeration Members
 
-- [SHA1](HmacAlgorithm.md#sha1)
-- [SHA256](HmacAlgorithm.md#sha256)
-- [SHA512](HmacAlgorithm.md#sha512)
+- [SHA1](index.HmacAlgorithm.md#sha1)
+- [SHA256](index.HmacAlgorithm.md#sha256)
+- [SHA512](index.HmacAlgorithm.md#sha512)
 
 ## Enumeration Members
 

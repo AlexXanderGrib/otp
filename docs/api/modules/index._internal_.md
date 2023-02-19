@@ -1,4 +1,4 @@
-[QIWI SDK](../README.md) / [Exports](../modules.md) / <internal\>
+[QIWI SDK](../README.md) / [Modules](../modules.md) / [index](index.md) / <internal\>
 
 # Module: <internal\>
 
@@ -6,7 +6,7 @@
 
 ### Type Aliases
 
-- [CommonOptions](internal_.md#commonoptions)
+- [CommonOptions](index._internal_.md#commonoptions)
 
 ## Type Aliases
 

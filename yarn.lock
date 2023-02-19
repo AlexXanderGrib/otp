@@ -4574,6 +4574,39 @@ __metadata:
   languageName: node
   linkType: hard
 
+"otp-io@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "otp-io@workspace:."
+  dependencies:
+    "@types/jest": ^29.2.3
+    "@types/node": ^18.14.0
+    "@typescript-eslint/eslint-plugin": ^5.44.0
+    "@typescript-eslint/parser": ^5.44.0
+    eslint: ^8.34.0
+    eslint-config-google: ^0.14.0
+    eslint-config-prettier: ^8.6.0
+    eslint-plugin-import: ^2.27.5
+    eslint-plugin-prettier: ^4.2.1
+    eslint-plugin-promise: ^6.1.1
+    eslint-plugin-security: ^1.7.1
+    eslint-plugin-unicorn: ^45.0.2
+    glob: ^8.1.0
+    jest: ^29.3.1
+    prettier: ^2.8.4
+    rimraf: ^4.1.2
+    rollup: ^3.17.1
+    rollup-plugin-cleanup: ^3.2.1
+    rollup-plugin-prettier: ^3.0.0
+    rollup-plugin-typescript2: ^0.34.1
+    ts-jest: ^29.0.3
+    ts-node: ^10.9.1
+    typedoc: ^0.23.21
+    typedoc-plugin-markdown: ^3.13.6
+    typedoc-plugin-missing-exports: ^1.0.0
+    typescript: ^4.9.5
+  languageName: unknown
+  linkType: soft
+
 "p-limit@npm:^2.2.0":
   version: 2.3.0
   resolution: "p-limit@npm:2.3.0"
@@ -4625,39 +4658,6 @@ __metadata:
   checksum: f8a8e9a7693659383f06aec604ad5ead237c7a261c18048a6e1b5b85a5f8a067e469aa24f5bc009b991ea3b058a87f5065ef4176793a200d4917349881216cae
   languageName: node
   linkType: hard
-
-"otp-io@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "otp-io@workspace:."
-  dependencies:
-    "@types/jest": ^29.2.3
-    "@types/node": ^18.14.0
-    "@typescript-eslint/eslint-plugin": ^5.44.0
-    "@typescript-eslint/parser": ^5.44.0
-    eslint: ^8.34.0
-    eslint-config-google: ^0.14.0
-    eslint-config-prettier: ^8.6.0
-    eslint-plugin-import: ^2.27.5
-    eslint-plugin-prettier: ^4.2.1
-    eslint-plugin-promise: ^6.1.1
-    eslint-plugin-security: ^1.7.1
-    eslint-plugin-unicorn: ^45.0.2
-    glob: ^8.1.0
-    jest: ^29.3.1
-    prettier: ^2.8.4
-    rimraf: ^4.1.2
-    rollup: ^3.17.1
-    rollup-plugin-cleanup: ^3.2.1
-    rollup-plugin-prettier: ^3.0.0
-    rollup-plugin-typescript2: ^0.34.1
-    ts-jest: ^29.0.3
-    ts-node: ^10.9.1
-    typedoc: ^0.23.21
-    typedoc-plugin-markdown: ^3.13.6
-    typedoc-plugin-missing-exports: ^1.0.0
-    typescript: ^4.9.5
-  languageName: unknown
-  linkType: soft
 
 "parent-module@npm:^1.0.0":
   version: 1.0.1
