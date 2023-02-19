@@ -1,0 +1,91 @@
+{
+  "name": "package_template",
+  "version": "1.0.0",
+  "description": "🚀 Package template",
+  "scripts": {
+    "test": "jest",
+    "build:dist": "rimraf dist && rollup -c",
+    "build:docs": "typedoc",
+    "build": "yarn build:dist && yarn build:docs",
+    "prepack": "yarn build",
+    "lint": "eslint src/*",
+    "prettify": "prettier --write src/**/*"
+  },
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "type": "commonjs",
+  "types": "./index.d.ts",
+  "typings": "./index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "require": "./index.js",
+      "import": "./index.mjs",
+      "types": "./index.d.ts"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexXanderGrib/package-template.git"
+  },
+  "keywords": [],
+  "files": [
+    "dist/",
+    "src/",
+    "coverage/",
+    "examples/",
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "README.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE.txt",
+    "SECURITY.md",
+    "CODE_OF_CONDUCT.md"
+  ],
+  "author": "Alexander G <me@alexxgrib.me> (https://alexxgrib.me/)",
+  "maintainers": [
+    "Alexander G <me@alexxgrib.me> (https://alexxgrib.me/)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexXanderGrib/package-template/issues"
+  },
+  "homepage": "https://github.com/AlexXanderGrib/package-template#readme",
+  "devDependencies": {
+    "@types/jest": "^29.2.3",
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
+    "eslint": "^8.34.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-security": "^1.7.1",
+    "eslint-plugin-unicorn": "^45.0.2",
+    "glob": "^8.1.0",
+    "jest": "^29.3.1",
+    "prettier": "^2.8.4",
+    "rimraf": "^4.1.2",
+    "rollup": "^3.17.1",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "rollup-plugin-prettier": "^3.0.0",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1",
+    "typedoc": "^0.23.21",
+    "typedoc-plugin-markdown": "^3.13.6",
+    "typedoc-plugin-missing-exports": "^1.0.0",
+    "typescript": "^4.9.5"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
