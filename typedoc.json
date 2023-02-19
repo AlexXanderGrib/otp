@@ -1,7 +1,7 @@
 {
   "name": "QIWI SDK",
   "out": "./docs/api",
-  "entryPoints": ["./index.d.ts"],
+  "entryPoints": ["./index.d.ts", "./crypto-browser.d.ts", "./crypto-node.d.ts"],
   "exclude": ["src/__test__", "**/node_modules/**"],
   "externalPattern": ["**/node_modules/**"],
   "excludePrivate": false,

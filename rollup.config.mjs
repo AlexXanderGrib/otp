@@ -9,10 +9,16 @@ import prettierConfig from "./.prettierrc.json" assert { type: "json" };
 
 /** @type {import('rollup').RollupOptions} */
 const config = {
-  input: [...glob.sync("./src/index.ts")],
+  input: [
+    ...glob.sync("./src/index.ts"),
+    ...glob.sync("./src/crypto-{node,browser}.ts")
+  ],
   external: [
     ...builtinModules,
-    ...Object.keys({ ...packageJson.devDependencies, ...packageJson.dependencies })
+    ...Object.keys({
+      ...packageJson.devDependencies,
+      ...packageJson.dependencies
+    })
   ],
   output: [
     {

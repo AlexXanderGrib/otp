@@ -1040,7 +1040,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.11.9":
+"@types/node@npm:^18.14.0":
   version: 18.14.0
   resolution: "@types/node@npm:18.14.0"
   checksum: d83fcf5e4ed544755dd9028f5cbb6b9d46235043159111bb2ad62223729aee581c0144a9f6df8ba73d74011db9ed4ebd7af2fd5e0996714e3beb508a5da8ac5c
@@ -4626,12 +4626,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"package_template@workspace:.":
+"otp-io@workspace:.":
   version: 0.0.0-use.local
-  resolution: "package_template@workspace:."
+  resolution: "otp-io@workspace:."
   dependencies:
     "@types/jest": ^29.2.3
-    "@types/node": ^18.11.9
+    "@types/node": ^18.14.0
     "@typescript-eslint/eslint-plugin": ^5.44.0
     "@typescript-eslint/parser": ^5.44.0
     eslint: ^8.34.0

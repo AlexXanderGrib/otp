@@ -1,7 +1,7 @@
 {
-  "name": "package_template",
+  "name": "otp-io",
   "version": "1.0.0",
-  "description": "🚀 Package template",
+  "description": "🕖 Typed library to work 2fa via Google Authenticator/Time-based TOTP/Hmac-based HOTP",
   "scripts": {
     "test": "jest",
     "build:dist": "rimraf dist && rollup -c",
@@ -23,6 +23,16 @@
       "require": "./index.js",
       "import": "./index.mjs",
       "types": "./index.d.ts"
+    },
+    "./crypto-node": {
+      "require": "./crypto-node.js",
+      "import": "./crypto-node.mjs",
+      "types": "./crypto-node.d.ts"
+    },
+    "./crypto-browser": {
+      "require": "./crypto-browser.js",
+      "import": "./crypto-browser.mjs",
+      "types": "./crypto-browser.d.ts"
     }
   },
   "publishConfig": {
@@ -30,9 +40,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlexXanderGrib/package-template.git"
+    "url": "git+https://github.com/AlexXanderGrib/otp.git"
   },
-  "keywords": [],
+  "keywords": [
+    "2fa",
+    "otp",
+    "hotp",
+    "topt",
+    "google authenticator",
+    "authenticator",
+    "one time password",
+    "one-time-password",
+    "authentication",
+    "2 factor",
+    "node",
+    "browser",
+    "frontend",
+    "backend"
+  ],
   "files": [
     "dist/",
     "src/",
@@ -41,6 +66,12 @@
     "index.js",
     "index.mjs",
     "index.d.ts",
+    "crypto-browser.js",
+    "crypto-browser.mjs",
+    "crypto-browser.d.ts",
+    "crypto-node.js",
+    "crypto-node.mjs",
+    "crypto-node.d.ts",
     "README.md",
     "CHANGELOG.md",
     "CONTRIBUTING.md",
@@ -54,12 +85,12 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AlexXanderGrib/package-template/issues"
+    "url": "https://github.com/AlexXanderGrib/otp/issues"
   },
-  "homepage": "https://github.com/AlexXanderGrib/package-template#readme",
+  "homepage": "https://github.com/AlexXanderGrib/otp#readme",
   "devDependencies": {
     "@types/jest": "^29.2.3",
-    "@types/node": "^18.11.9",
+    "@types/node": "^18.14.0",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
     "eslint": "^8.34.0",
