@@ -1,35 +1,23 @@
 import { Hmac, HmacAlgorithm } from "./hmac";
 import type { RandomBytes } from "./random";
 
+const algorithmMap = new Map<HmacAlgorithm, string>([
+  [HmacAlgorithm.SHA1, "SHA-1"],
+  [HmacAlgorithm.SHA256, "SHA-256"],
+  [HmacAlgorithm.SHA512, "SHA-512"]
+]);
+
 export const hmac: Hmac = async function hmac(algorithm, key, message) {
-  let name: string;
+  const name = algorithmMap.get(algorithm);
 
-  switch (algorithm) {
-    case HmacAlgorithm.SHA1: {
-      name = "SHA-1";
-      break;
-    }
-    case HmacAlgorithm.SHA256: {
-      name = "SHA-256";
-      break;
-    }
-    case HmacAlgorithm.SHA512: {
-      name = "SHA-512";
-      break;
-    }
-
-    default: {
-      throw new Error(`Invalid hmac algorithm: "${algorithm}"`);
-    }
+  if (!name) {
+    throw new Error(`Invalid algorithm: "${algorithm}"`);
   }
 
   const cryptoKey = await crypto.subtle.importKey(
     "raw",
     key,
-    {
-      name: "HMAC",
-      hash: { name }
-    },
+    { name: "HMAC", hash: { name } },
     false,
     ["sign", "verify"]
   );
@@ -38,7 +26,7 @@ export const hmac: Hmac = async function hmac(algorithm, key, message) {
   return new Uint8Array(signature);
 };
 
-export const randomBytes: RandomBytes = async function randomBytes(size) {
+export const randomBytes: RandomBytes = function randomBytes(size) {
   const buffer = new Uint8Array(size);
 
   return crypto.getRandomValues(buffer);

@@ -1,4 +1,4 @@
-import { createHmac, randomFill } from "crypto";
+import { createHmac, randomFillSync } from "crypto";
 import type { Hmac } from "./hmac";
 import type { RandomBytes } from "./random";
 
@@ -7,13 +7,5 @@ export const hmac: Hmac = async function hmac(algorithm, key, message) {
 };
 
 export const randomBytes: RandomBytes = function randomBytes(size) {
-  return new Promise((resolve, reject) => {
-    const buffer = new Uint8Array(size);
-
-    randomFill(buffer, (error, buffer) => {
-      if (buffer) return resolve(buffer);
-
-      reject(error);
-    });
-  });
+  return randomFillSync(new Uint8Array(size));
 };

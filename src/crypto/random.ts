@@ -1,1 +1,1 @@
-export type RandomBytes = (size: number) => Promise<Uint8Array>;
+export type RandomBytes = (size: number) => Uint8Array;

@@ -54,6 +54,7 @@ export function getKeyUri(options: UriOptions): string {
       break;
     }
 
+    /* istanbul ignore next: invalid types are not used in tests */
     default: {
       throw new Error(`Invalid method type: "${(options as UriOptions).type}"`);
     }

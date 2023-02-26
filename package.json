@@ -1,6 +1,6 @@
 {
   "name": "otp-io",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "🕖 Typed library to work 2fa via Google Authenticator/Time-based TOTP/Hmac-based HOTP",
   "scripts": {
     "test": "jest",
@@ -29,10 +29,15 @@
       "import": "./crypto-node.mjs",
       "types": "./crypto-node.d.ts"
     },
+    "./crypto-web": {
+      "require": "./crypto-web.js",
+      "import": "./crypto-web.mjs",
+      "types": "./crypto-web.d.ts"
+    },
     "./crypto-browser": {
-      "require": "./crypto-browser.js",
-      "import": "./crypto-browser.mjs",
-      "types": "./crypto-browser.d.ts"
+      "require": "./crypto-web.js",
+      "import": "./crypto-web.mjs",
+      "types": "./crypto-web.d.ts"
     }
   },
   "publishConfig": {
