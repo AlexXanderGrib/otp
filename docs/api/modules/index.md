@@ -18,7 +18,9 @@
 
 ### Classes
 
+- [HOTP](../classes/index.HOTP.md)
 - [SecretKey](../classes/index.SecretKey.md)
+- [TOTP](../classes/index.TOTP.md)
 
 ### Type Aliases
 
@@ -47,12 +49,12 @@
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `algorithm?` | [`HmacAlgorithm`](../enums/index.HmacAlgorithm.md) |
-| `counter` | `number` |
-| `digits?` | `number` |
-| `secret` | [`SecretKey`](../classes/index.SecretKey.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `algorithm?` | [`HmacAlgorithm`](../enums/index.HmacAlgorithm.md) | Hash algorithms for generating new codes. - Any other than `sha1` is not supported by Google Authenticator **`Default`** "sha1" |
+| `counter` | `number` | Incrementing counter. From 0 to Number.MAX_SAFE_INTEGER (53 bits) |
+| `digits?` | `number` | Count of digits. - Any other than `6` is not supported by Google Authenticator **`Default`** 6 |
+| `secret` | [`SecretKey`](../classes/index.SecretKey.md) | Secret key |
 
 #### Defined in
 
@@ -88,11 +90,11 @@ ___
 
 ### RandomBytes
 
-Ƭ **RandomBytes**: (`size`: `number`) => `Promise`<`Uint8Array`\>
+Ƭ **RandomBytes**: (`size`: `number`) => `Uint8Array`
 
 #### Type declaration
 
-▸ (`size`): `Promise`<`Uint8Array`\>
+▸ (`size`): `Uint8Array`
 
 ##### Parameters
 
@@ -102,7 +104,7 @@ ___
 
 ##### Returns
 
-`Promise`<`Uint8Array`\>
+`Uint8Array`
 
 #### Defined in
 
@@ -116,14 +118,14 @@ ___
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `algorithm?` | [`HmacAlgorithm`](../enums/index.HmacAlgorithm.md) |
-| `digits?` | `number` |
-| `now?` | `Date` |
-| `pad?` | `boolean` |
-| `secret` | [`SecretKey`](../classes/index.SecretKey.md) |
-| `stepSeconds?` | `number` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `algorithm?` | [`HmacAlgorithm`](../enums/index.HmacAlgorithm.md) | Hash algorithms for generating new codes. - Any other than `sha1` is not supported by Google Authenticator **`Default`** "sha1" |
+| `digits?` | `number` | Count of digits. - Any other than `6` is not supported by Google Authenticator **`Default`** 6 |
+| `now?` | `Date` | Current date **`Default`** Date() |
+| `pad?` | `boolean` | Enables padding of secret key. - `true` - compatible with [RFC6238](https://www.ietf.org/rfc/rfc6238.txt) - `false` - compatible with Google Authenticator **`Default`** false |
+| `secret` | [`SecretKey`](../classes/index.SecretKey.md) | Secret key |
+| `stepSeconds?` | `number` | Interval in seconds between code generation - Any other than `30` is not supported by Google Authenticator **`Default`** 30 |
 
 #### Defined in
 
@@ -165,7 +167,7 @@ ___
 
 ### generateKey
 
-▸ **generateKey**(`random`, `size?`): `Promise`<[`SecretKey`](../classes/index.SecretKey.md)\>
+▸ **generateKey**(`random`, `size?`): [`SecretKey`](../classes/index.SecretKey.md)
 
 **`Export`**
 
@@ -178,7 +180,7 @@ ___
 
 #### Returns
 
-`Promise`<[`SecretKey`](../classes/index.SecretKey.md)\>
+[`SecretKey`](../classes/index.SecretKey.md)
 
 #### Defined in
 
@@ -200,7 +202,7 @@ ___
 
 #### Defined in
 
-dist/hotp.options.d.ts:15
+dist/hotp.options.d.ts:31
 
 ___
 
@@ -218,7 +220,7 @@ ___
 
 #### Defined in
 
-dist/totp.options.d.ts:17
+dist/totp.options.d.ts:46
 
 ___
 
@@ -249,6 +251,8 @@ ___
 ### hotp
 
 ▸ **hotp**(`hmac`, `options`): `Promise`<`string`\>
+
+Generates HOTP code from secret key, counter and options
 
 **`Export`**
 
@@ -295,7 +299,13 @@ ___
 
 ▸ **totp**(`hmac`, `options`): `Promise`<`string`\>
 
+Generates TOTP code from secret key and options
+
 **`Export`**
+
+**`Throws`**
+
+if HMAC algorithm is invalid. Use [HmacAlgorithm](../enums/index.HmacAlgorithm.md) to avoid this
 
 #### Parameters
 
@@ -310,4 +320,4 @@ ___
 
 #### Defined in
 
-dist/totp.d.ts:11
+dist/totp.d.ts:12

@@ -8,11 +8,13 @@
 
 ### References
 
+- [HOTP](index.default.md#hotp)
 - [HOTPOptions](index.default.md#hotpoptions)
 - [Hmac](index.default.md#hmac)
 - [HmacAlgorithm](index.default.md#hmacalgorithm)
 - [RandomBytes](index.default.md#randombytes)
 - [SecretKey](index.default.md#secretkey)
+- [TOTP](index.default.md#totp)
 - [TOTPOptions](index.default.md#totpoptions)
 - [UriOptions](index.default.md#urioptions)
 - [exportKey](index.default.md#exportkey)
@@ -20,11 +22,17 @@
 - [getDefaultHOTPOptions](index.default.md#getdefaulthotpoptions)
 - [getDefaultTOTPOptions](index.default.md#getdefaulttotpoptions)
 - [getKeyUri](index.default.md#getkeyuri)
-- [hotp](index.default.md#hotp)
+- [hotp](index.default.md#hotp-1)
 - [importKey](index.default.md#importkey)
-- [totp](index.default.md#totp)
+- [totp](index.default.md#totp-1)
 
 ## References
+
+### HOTP
+
+Re-exports [HOTP](../classes/index.HOTP.md)
+
+___
 
 ### HOTPOptions
 
@@ -53,6 +61,12 @@ ___
 ### SecretKey
 
 Re-exports [SecretKey](../classes/index.SecretKey.md)
+
+___
+
+### TOTP
+
+Re-exports [TOTP](../classes/index.TOTP.md)
 
 ___
 

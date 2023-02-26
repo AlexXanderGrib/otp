@@ -6,6 +6,5 @@
 
 ### Modules
 
-- [crypto-browser](modules/crypto_browser.md)
 - [crypto-node](modules/crypto_node.md)
 - [index](modules/index.md)

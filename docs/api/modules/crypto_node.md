@@ -35,7 +35,7 @@ ___
 
 ### randomBytes
 
-▸ **randomBytes**(`size`): `Promise`<`Uint8Array`\>
+▸ **randomBytes**(`size`): `Uint8Array`
 
 #### Parameters
 
@@ -45,7 +45,7 @@ ___
 
 #### Returns
 
-`Promise`<`Uint8Array`\>
+`Uint8Array`
 
 #### Defined in
 
