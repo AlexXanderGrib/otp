@@ -77,4 +77,4 @@ if (code === input) {
 
 ## Api Reference
 
-[API Reference](./docs/api/README.md)
+[API Reference](./docs/api/modules.md)
