@@ -49,11 +49,13 @@ Google Authenticator limits are defaults for this library.
 ```typescript
 // 1. Import library - use totp (code changes with time)
 import { totp, generateKey, getKeyUri } from "otp-io";
-// 2. Import crypto adapter. Either `crypto-node` or `crypto-web` - API is identical
-import { hmac, randomBytes } from "otp-io/crypto-node";
+// 2. Import crypto adapter. 
+// Specify `crypto-node` or `crypto-web` if node/bundler cannot 
+// detect correct version
+import { hmac, randomBytes } from "otp-io/crypto";
 
 // 3. Get key from somewhere. Or generate it
-const key = generateKey(randomBytes, /* bytes: */ 20); // 5-20 good for Google Authenticator
+const secret = generateKey(randomBytes, /* bytes: */ 20); // 5-20 good for Google Authenticator
 
 // 4. Get key import url
 const url = getKeyUri({

@@ -16,7 +16,10 @@ export class TOTP {
    * @param {TOTPOptions} options
    * @memberof TOTP
    */
-  constructor(private readonly _hmac: Hmac, public options: TOTPOptions) {}
+  constructor(
+    private readonly _hmac: Hmac,
+    public options: TOTPOptions
+  ) {}
 
   /**
    *

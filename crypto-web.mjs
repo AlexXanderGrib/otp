@@ -1,1 +1,1 @@
-export * from "./dist/crypto-browser.mjs";
+export * from "./dist/crypto-web.mjs";

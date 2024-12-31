@@ -16,7 +16,10 @@ export class HOTP {
    * @param {HOTPOptions} options
    * @memberof HOTP
    */
-  constructor(private readonly _hmac: Hmac, public options: HOTPOptions) {}
+  constructor(
+    private readonly _hmac: Hmac,
+    public options: HOTPOptions
+  ) {}
 
   /**
    *

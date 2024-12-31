@@ -1,17 +1,15 @@
 import typescript from "rollup-plugin-typescript2";
 import { builtinModules } from "module";
-import glob from "glob";
+import { glob } from "glob";
 import cleanup from "rollup-plugin-cleanup";
-import prettier from "rollup-plugin-prettier";
 
 import packageJson from "./package.json" assert { type: "json" };
-import prettierConfig from "./.prettierrc.json" assert { type: "json" };
 
 /** @type {import('rollup').RollupOptions} */
 const config = {
   input: [
     ...glob.sync("./src/index.ts"),
-    ...glob.sync("./src/crypto-{node,browser}.ts")
+    ...glob.sync("./src/crypto-{node,web}.ts")
   ],
   external: [
     ...builtinModules,
@@ -66,10 +64,6 @@ const config = {
       extensions: ["js", "ts", "mjs"],
       comments: ["jsdoc"],
       compactComments: true
-    }),
-    prettier({
-      ...prettierConfig,
-      parser: "babel-ts"
     })
   ]
 };

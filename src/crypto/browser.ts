@@ -19,7 +19,7 @@ export const hmac: Hmac = async function hmac(algorithm, key, message) {
     key,
     { name: "HMAC", hash: { name } },
     false,
-    ["sign", "verify"]
+    ["sign"]
   );
 
   const signature = await crypto.subtle.sign("HMAC", cryptoKey, message);

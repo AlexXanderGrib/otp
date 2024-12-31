@@ -40,7 +40,7 @@ export async function totp(hmac: Hmac, options: TOTPOptions): Promise<string> {
   const merged = { ...getDefaultTOTPOptions(), ...options };
   const counter = Math.floor(merged.now.getTime() / 1000 / merged.stepSeconds);
 
-  let bytes = new Uint8Array(options.secret.bytes);
+  let bytes: Uint8Array = new Uint8Array(options.secret.bytes);
 
   if (merged.pad) {
     const length = keyLengths.get(merged.algorithm);

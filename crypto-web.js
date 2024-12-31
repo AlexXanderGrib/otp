@@ -1,1 +1,1 @@
-module.exports = require("./dist/crypto-browser");
+module.exports = require("./dist/crypto-web");
